@@ -20,8 +20,15 @@
   ],
   "type": "module",
   "main": "dist/index.js",
-  "license": "ISC",
-  "dependencies": {
-    "tabou-npm-module": "^1.0.0"
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.8.3"
   }
 }
