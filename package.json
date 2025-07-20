@@ -34,7 +34,8 @@
     "format:write": "prettier --write .",
     "prepublishOnly": "npm run clean && npm run build && npm run test",
     "local-release": "changeset version && changeset publish",
-    "release": "npm run build && changeset publish"
+    "release": "npm run clean && npm run build && npm run test && changeset publish",
+    "release:dry": "npm run clean && npm run build && npm run test && changeset publish --dry-run"
   },
   "license": "MIT",
   "devDependencies": {
