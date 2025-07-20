@@ -1,0 +1,27 @@
+{
+  "name": "tabou-npm-module",
+  "version": "1.0.0",
+  "description": "A package for Total TypeScript",
+  "homepage": "https://github.com/agigox/tabou-npm-module",
+  "bugs": {
+    "url": "https://github.com/agigox/tabou-npm-module/issues"
+  },
+  "author": "Amine TABOU <amin.tabou@gmail.com> (https://www.amine-tabou.com/)",
+  "keywords": [
+    "sum",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agigox/tabou-npm-module.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "license": "ISC",
+  "dependencies": {
+    "tabou-npm-module": "^1.0.0"
+  }
+}
