@@ -1,0 +1,33 @@
+name: Changesets
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-changesets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check for changesets
+        run: |
+          if [ -z "$(ls -A .changeset/*.md 2>/dev/null | grep -v README.md)" ]; then
+            echo "⚠️  No changesets found. Please add a changeset with 'npx changeset' if this PR includes changes that should be released."
+            echo "If this PR doesn't need a changeset (docs, tests, etc.), you can ignore this warning."
+          else
+            echo "✅ Changesets found!"
+            ls .changeset/*.md | grep -v README.md || true
+          fi

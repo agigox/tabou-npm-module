@@ -53,7 +53,32 @@ npm run build
 ### Testing
 
 ```bash
+# Run tests once
 npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with UI
+npm run test:ui
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+### Releasing
+
+This project uses [Changesets](https://github.com/changesets/changesets) for version management and automated releases.
+
+```bash
+# Add a changeset (describes your changes for the changelog)
+npx changeset
+
+# Local release (for testing)
+npm run local-release
+
+# Release via CI (automatic when changesets are merged to main)
+# Just merge the "Version Packages" PR that gets created automatically
 ```
 
 ## Contributing
