@@ -39,6 +39,7 @@ Thank you for considering contributing to this project! Here are some guidelines
 ## CI/CD
 
 This project uses GitHub Actions for continuous integration. The CI pipeline will:
+
 - Test on multiple Node.js versions (18.x, 20.x, 22.x)
 - Build the TypeScript code
 - Run the test suite

@@ -1,5 +1,8 @@
 # tabou-npm-module
 
+[![CI](https://github.com/agigox/tabou-npm-module/actions/workflows/ci.yml/badge.svg)](https://github.com/agigox/tabou-npm-module/actions/workflows/ci.yml)
+[![npm version](https://badge.fury.io/js/tabou-npm-module.svg)](https://badge.fury.io/js/tabou-npm-module)
+
 A package for Total TypeScript
 
 ## Installation
@@ -11,7 +14,7 @@ npm install tabou-npm-module
 ## Usage
 
 ```javascript
-import { /* your exports */ } from 'tabou-npm-module';
+import {} from /* your exports */ 'tabou-npm-module';
 
 // Example usage
 ```
@@ -64,6 +67,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Author
 
 **Amine TABOU**
+
 - Website: [https://www.amine-tabou.com/](https://www.amine-tabou.com/)
 - Email: amin.tabou@gmail.com
 
